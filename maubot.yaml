@@ -1,0 +1,11 @@
+maubot: 0.1.0
+id: org.besendorf.awarenessbot
+version: 1.0.0
+modules:
+  - awarenessbot
+main_class: Awareness
+config: true
+database: true
+database_type: asyncpg
+extra_files:
+  - base-config.yaml

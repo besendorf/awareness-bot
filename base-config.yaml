@@ -1,0 +1,30 @@
+# The forbidden keywords in the room that trigger a reaction from the bot. Users that use the keywords in messages will receive 2 warning from the bot and will be muted by the bot on a third offense.
+# You can also add emoji reactions as keywords
+keywords:
+    - arsch
+    - fuck
+
+# Room-ID. Go to Room Settings -> Advanced and copy the room id. Room that gets notified when a message is reported
+notification_room: ""
+
+# In the messages you can use the following variables:
+# [user]: The user who used a keyword
+# [keyword]: the keyword that was used by the user
+# [count]: how many warnings the user has already received
+# Message for Warnings 1 and 2
+message_warning: |
+    Dear [user], you just used the word "[keyword]". According to our rules this is not allowed.
+    You receive a warning. If you use a forbidden word again after two warnings you will be muted. This is warning number [count].
+
+# Message when a user has already been warned 2 times and now will be muted by the bot.
+message_mute: |
+    Dear [user], you just used the word "[keyword]". According to our rules this is not allowed.
+    As you have received two warnings already you will now be muted.
+
+# Message when a user reports a message from another user
+message_report: |
+    Hello [user], your message was reported by [reporter]. According to our rules this message will be forwarded to the moderators and you will be muted until they review your message.
+
+# Message to the notification_room when a user is reported
+message_notify: |
+    Hey mods, in the room [room] the following message by [user] was reported by [reporter]. [user] has been muted.
